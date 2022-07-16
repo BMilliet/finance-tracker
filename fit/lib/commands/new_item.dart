@@ -8,11 +8,11 @@ class NewItemCommand extends Command {
   String name = "add";
 
   NewItemCommand() {
-	// something
+    // something
   }
 
   @override
   run() {
-	print("something");
+    print("something");
   }
 }
