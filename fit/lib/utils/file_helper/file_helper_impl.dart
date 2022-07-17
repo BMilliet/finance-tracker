@@ -1,15 +1,20 @@
 import 'dart:io';
 import 'dart:convert';
 
-class FileHelper {
+import 'package:fit/utils/file_helper/file_helper.dart';
+
+class FileHelperImpl implements FileHelper {
+  @override
   bool fileExists(String path) {
     return _getFile(path).existsSync();
   }
 
+  @override
   String read(String path) {
     return _getFile(path).readAsStringSync();
   }
 
+  @override
   Map<String, dynamic> readAsJson(String path) {
     return json.decode(read(path));
   }

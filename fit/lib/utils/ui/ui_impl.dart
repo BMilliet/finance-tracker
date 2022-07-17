@@ -1,11 +1,14 @@
 import 'dart:io';
+import 'package:fit/utils/ui/ui.dart';
 
-class UI {
+class UIImpl implements UI {
+  @override
   error(String msg) {
     echo(msg, Color.red);
     exit(1);
   }
 
+  @override
   echo(String? text, Color color) {
     String? msg = "";
 
@@ -38,5 +41,3 @@ class UI {
     return "\x1B[$section\x1B[0m";
   }
 }
-
-enum Color { red, green, blue, cyan, yellow }
