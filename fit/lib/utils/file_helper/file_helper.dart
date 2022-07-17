@@ -7,6 +7,10 @@ abstract class FileHelper {
     throw "Not implemented";
   }
 
+  void createFile(String path, bool recursive) {
+    throw "Not implemented";
+  }
+
   Map<String, dynamic> readAsJson(String path) {
     throw "Not implemented";
   }

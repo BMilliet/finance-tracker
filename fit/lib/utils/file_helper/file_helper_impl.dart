@@ -19,6 +19,11 @@ class FileHelperImpl implements FileHelper {
     return json.decode(read(path));
   }
 
+  @override
+  void createFile(String path, bool recursive) {
+    File(path).createSync(recursive: recursive);
+  }
+
   File _getFile(String path) {
     return File(path);
   }

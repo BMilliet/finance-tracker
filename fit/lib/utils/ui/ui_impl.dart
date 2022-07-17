@@ -9,6 +9,14 @@ class UIImpl implements UI {
   }
 
   @override
+  success(String msg, bool shouldExit) {
+    echo(msg, Color.green);
+    if (shouldExit) {
+      exit(0);
+    }
+  }
+
+  @override
   echo(String? text, Color color) {
     String? msg = "";
 

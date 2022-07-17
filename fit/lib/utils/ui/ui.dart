@@ -3,6 +3,10 @@ abstract class UI {
     throw "Not implemented";
   }
 
+  success(String msg, bool shouldExit) {
+    throw "Not implemented";
+  }
+
   echo(String? text, Color color) {
     throw "Not implemented";
   }
