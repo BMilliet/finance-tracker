@@ -7,7 +7,11 @@ abstract class UI {
     throw "Not implemented";
   }
 
-  echo(String? text, Color color) {
+  echo(String? text, {Color? color}) {
+    throw "Not implemented";
+  }
+
+  String? input(String msg, {Color? color}) {
     throw "Not implemented";
   }
 }

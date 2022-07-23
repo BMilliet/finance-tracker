@@ -15,5 +15,10 @@ class UIMock implements UI {
   }
 
   @override
-  echo(String? text, Color color) {}
+  echo(String? text, {Color? color}) {}
+
+  @override
+  String? input(String msg, {Color? color}) {
+    return msg;
+  }
 }

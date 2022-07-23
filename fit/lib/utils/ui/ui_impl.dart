@@ -1,23 +1,24 @@
+import 'dart:convert';
 import 'dart:io';
 import 'package:fit/utils/ui/ui.dart';
 
 class UIImpl implements UI {
   @override
   error(String msg) {
-    echo(msg, Color.red);
+    echo(msg, color: Color.red);
     exit(1);
   }
 
   @override
   success(String msg, bool shouldExit) {
-    echo(msg, Color.green);
+    echo(msg, color: Color.green);
     if (shouldExit) {
       exit(0);
     }
   }
 
   @override
-  echo(String? text, Color color) {
+  echo(String? text, {Color? color}) {
     String? msg = "";
 
     switch (color) {
@@ -41,6 +42,12 @@ class UIImpl implements UI {
     }
 
     print(msg);
+  }
+
+  @override
+  String? input(String msg, {Color? color}) {
+    echo(msg, color: color);
+    return stdin.readLineSync(encoding: utf8);
   }
 
   String _addColor(String? msg, int code) {

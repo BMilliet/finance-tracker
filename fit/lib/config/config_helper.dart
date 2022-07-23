@@ -1,4 +1,4 @@
-import 'package:fit/config/user_cases/new_user_onboard_config_use_case.dart';
+import 'package:fit/config/use_cases/new_user_onboard_config_use_case.dart';
 import 'package:fit/constants/constants.dart' as constants;
 import 'package:fit/utils/file_helper/file_helper.dart';
 
